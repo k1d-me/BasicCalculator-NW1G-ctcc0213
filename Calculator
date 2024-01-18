@@ -1,0 +1,63 @@
+
+    package calculator;
+    import java.util.Scanner;
+    public class Calculator {
+        public static void main(String[] args) {
+            Scanner scan = new Scanner (System.in);
+
+            System.out.println("Choose your Operation:");
+            System.out.println("1 (Addition)");
+            System.out.println("2 (Subtraction)");
+            System.out.println("3 (Multiplication)");
+            System.out.println("4 (Division)");
+
+            int choose = scan.nextInt();
+
+            System.out.println("Enter First Number:");
+            int x = scan.nextInt();
+            System.out.println("Enter Second Number:");
+            int y = scan.nextInt();
+
+
+            if (choose == 1) {
+                    System.out.println("Answer: " + add(x,y));
+            }
+            else if (choose == 2) {
+                    System.out.println("Answer: " + sub(x,y));
+            }
+            else if (choose == 3) {
+                    System.out.println("Answer: " + mul(x,y));
+            }
+            else if (choose == 4) {
+                    System.out.println("Answer: " + div(x,y));
+            }
+            else{
+                System.out.println("You're out of range");
+            }
+
+        }
+        public static int add(int x,int y){
+            int n;
+            n=x+y;
+            return n;
+        }
+         public static int sub(int x,int y){
+            int n;
+            n=x-y;
+            return n;
+
+        }
+          public static int mul(int x,int y){
+            int n;
+            n=x*y;
+            return n;
+        }
+           public static int div(int x,int y){
+            int n;
+            n=x/y;
+            return n;
+
+
+        }
+
+    }
